@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="index.html" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Polygon - Company Details">
+    <meta name="keywords" content="HTML, CSS,JavaScript, AJAX, jQuery">
+    <meta name="author" content="Bruce Bauer">
+    <title>Polygon - Company Details</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="myform">
+        <div class="formcontainer">
+            <h2>Currency Value History</h2>
+            <label for="StockSymbol" class="formlabel" >Base Currency: </label>
+            <!--<label for="DisplayStock" class="formlabel" ></label>-->
+            <input type="text" id="StockSymbol" name="StockSymbol" size="6" maxlength="6"
+                    data-rule-required="true"  data-msg-required="Value is Required">
+            <option value="">select a currency...</option>
+            <option value="USD"> US Dollar</option>
+            <option value="MXN">Mexican Peso</option>
+            <option value="EUR">Euro</option>
+            <option value="R$">Brazil</option>
+            <option value="TRY">Turkish Iira</option></select><br>
+
+            <label for="StockSymbol" class="formlabel" >Convert to Currency: </label>
+            <!--<label for="DisplayStock" class="formlabel" ></label>-->
+            <input type="text" id="StockSymbol" name="StockSymbol" size="6" maxlength="6"
+                    data-rule-required="true"  data-msg-required="Value is Required">
+            <label class="error" for="StockSymbol" id="StockSymbolError"></label><br>
+		    <option value="">select a currency...</option>
+            <option value="USD">US Dollar</option>
+            <option value="MXN">Mexican Peso</option>
+            <option value="EUR">Euro</option>
+            <option value="R$">Brazil</option>
+            <option value="TRY">Turkish Iira</option></select><br>
+
+
+            <label for="StockSymbol" class="formlabel" >From Date: </label>
+            <!--<label for="DisplayStock" class="formlabel" ></label>-->
+            <input type="text" id="StockSymbol" name="StockSymbol" size="6" maxlength="6"
+                    data-rule-required="true"  data-msg-required="Value is Required">
+            <label class="error" for="StockSymbol" id="StockSymbolError"></label><br>
+
+            <label for="StockSymbol" class="formlabel" >To Date: </label>
+            <!--<label for="DisplayStock" class="formlabel" ></label>-->
+            <input type="text" id="StockSymbol" name="StockSymbol" size="6" maxlength="6"
+                    data-rule-required="true"  data-msg-required="Value is Required">
+            <label class="error" for="StockSymbol" id="StockSymbolError"></label><br>
+            <br><br>
+
+            <input type="button" value="Show Results" id="Show Results" name="Show Results" onclick="GetStock();">
+            <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
+            
+
+            <div class="clearfix">
+                <div class="img-container">
+                    <span id="StockValueTable"></span>
+                </div>
+                <div class="img-container">
+                    <span id="StockVolumeTable"></span>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="clearfix">
+                <div class="img-container">
+                    <canvas id="chartjs-0" width="400" height="400"></canvas>
+                </div>
+                <div class="img-container">
+                    <canvas id="chartjs-1" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="scripts/script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
