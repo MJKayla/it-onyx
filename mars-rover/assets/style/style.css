@@ -1,0 +1,64 @@
+body{
+    background-image: url("../img/marblebck.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #13adff;
+    font-family: 'Rubik Pixels', cursive;
+}
+
+.formcontainer {
+    width: 10000px;
+    padding: 5px;
+}
+
+.formlabel {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 5px;
+}
+
+.error {
+    color: red;
+    padding-left: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+    border-collapse: collapse
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.img-container {
+  float: left;
+  width: 40%;
+  padding: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#galleryContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img{
+  width: 250px;
+  padding: 5px;
+}
