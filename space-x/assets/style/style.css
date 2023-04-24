@@ -1,10 +1,10 @@
 /* Color Theme Swatches in Hex */
 .color-theme_Dragon-Logo-1-hex {
-  color: #261F22;
+  color: #8843ff;
 }
 
 .color-theme_Dragon-Logo-2-hex {
-  color: #1C2D8C;
+  color: #1dffc6;
 }
 
 .color-theme_Dragon-Logo-3-hex {
@@ -12,7 +12,7 @@
 }
 
 .color-theme_Dragon-Logo-4-hex {
-  color: #2A438C;
+  color: #f02132;
 }
 
 .color-theme_Dragon-Logo-5-hex {
@@ -21,7 +21,7 @@
 
 /* Color Theme Swatches in RGBA */
 .color-theme_Dragon-Logo-1-rgba {
-  color: rgba(38, 31, 34, 1);
+  color: rgb(17, 253, 127);
 }
 
 .color-theme_Dragon-Logo-2-rgba {
@@ -33,7 +33,7 @@
 }
 
 .color-theme_Dragon-Logo-4-rgba {
-  color: rgba(42, 67, 140, 1);
+  color: rgb(53, 228, 213);
 }
 
 .color-theme_Dragon-Logo-5-rgba {
@@ -46,7 +46,7 @@
 }
 
 .color-theme_Dragon-Logo-2-hsla {
-  color: hsla(230, 66, 32, 1);
+  color: rgb(96, 212, 238);
 }
 
 .color-theme_Dragon-Logo-3-hsla {
@@ -54,7 +54,7 @@
 }
 
 .color-theme_Dragon-Logo-4-hsla {
-  color: hsla(224, 53, 35, 1);
+  color: rgb(28, 244, 255);
 }
 
 .color-theme_Dragon-Logo-5-hsla {
@@ -106,9 +106,9 @@ img {
 }
 
 body {
-  font-family: 'Maven Pro', sans-serif;
-  background-color: #4F5BFF;
-  color: white;
+  font-family: 'Maven Pro', century gothic;
+  background-color: #e52727;
+  color: rgb(7, 39, 57);
 }
 
 header.primary {
@@ -117,7 +117,7 @@ header.primary {
 .replace-space {
   
   width:180px;
-  background: url("../img/180SpaceX-Logo.png");
+  background: url("assets/img/SpaceX-Logo.png");
   background-repeat: no-repeat;
   text-indent: 100%;
   white-space: nowrap;
@@ -197,13 +197,13 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #2A438C;
+  background-color: #fff018;
   color: #F2F2F2;
   padding: 5px;
 }
 
 tr:nth-child(odd) {
-  background-color: #4F5BFF;
+  background-color: #ff6e20;
   color: #F2F2F2;
   padding: 5px;
 }
@@ -229,10 +229,10 @@ td:first-of-type {
 }
 
 #posts article.post {
-  background: #2A438C;
+  background: #ffc400;
   margin: 20px;
   padding: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
  article.post figure{
   margin: 0;
